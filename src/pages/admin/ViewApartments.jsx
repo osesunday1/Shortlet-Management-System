@@ -1,9 +1,9 @@
-import ViewApartmentsComp from "../../components/admin/ViewApartmentsComp";
+import ViewGuestComp from "../../components/admin/ViewGuestComp";
 
 
 const ViewBookings = () => {
   return (
-    <ViewApartmentsComp/>
+    <ViewGuestComp/>
   );
 };
 
