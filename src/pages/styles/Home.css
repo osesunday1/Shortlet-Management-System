@@ -1,0 +1,271 @@
+/* Home Container */
+.home-container {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0.95), rgba(245, 240, 255, 0.98));
+  color: #333;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #6a0dad;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  padding: 5px 15px;
+  background: white;
+  color: #333;
+  border: 1px solid #ddd;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  width: 200px;
+}
+
+.search-bar button {
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #5a0c9c;
+}
+
+/* Date Inputs */
+.search-bar input[type="date"] {
+  width: 150px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+  background: white;
+  color: #333;
+  cursor: pointer;
+}
+
+.search-bar input[type="date"]:hover {
+  border-color: #6a0dad;
+}
+
+.search-bar input[type="date"]:focus {
+  outline: none;
+  border-color: #5a0c9c;
+  box-shadow: 0px 0px 5px rgba(106, 13, 173, 0.5);
+}
+
+/* User Menu */
+.user-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.user-menu button {
+  background: none;
+  border: 1px solid #6a0dad;
+  padding: 8px 12px;
+  border-radius: 5px;
+  color: #6a0dad;
+  cursor: pointer;
+}
+
+.user-menu button:hover {
+  background: rgba(106, 13, 173, 0.1);
+}
+
+/* Category Filters */
+.category-filters {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+}
+
+.category-btn {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #6a0dad;
+  background: white;
+  color: #6a0dad;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-btn:hover {
+  background: rgba(106, 13, 173, 0.1);
+}
+
+.category-btn.selected {
+  background: #6a0dad;
+  color: white;
+  font-weight: bold;
+  border: 1px solid #6a0dad;
+}
+
+/* Featured Listings */
+.apartments {
+  padding: 30px;
+  text-align: center;
+}
+
+.apartments h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #6a0dad;
+}
+
+.apartment-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.apartment-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  color: #333;
+}
+
+.apartment-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.apartment-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.apartment-card .info {
+  padding: 15px;
+  text-align: left;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.rating {
+  font-size: 16px;
+  color: #333;
+}
+
+.apartment-card button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.apartment-card button:hover {
+  background-color: #5a0c9c;
+}
+
+/* See More Button */
+.see-more-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.see-more-btn {
+  padding: 12px 20px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.see-more-btn:hover {
+  background-color: #5a0c9c;
+}
+
+/* Support Section */
+.support-section {
+  text-align: center;
+  padding: 40px 20px;
+  background: rgba(106, 13, 173, 0.05);
+  backdrop-filter: blur(5px);
+  margin-top: 30px;
+  border-radius: 15px;
+}
+
+.support-section h2 {
+  font-size: 26px;
+  font-weight: bold;
+  color: #6a0dad;
+}
+
+.support-section p {
+  font-size: 18px;
+  margin-top: 10px;
+  color: #333;
+}
+
+.support-section button {
+  margin-top: 15px;
+  padding: 10px 18px;
+  background-color: #6a0dad;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.support-section button:hover {
+  background-color: #5a0c9c;
+}
+
+/* Footer */
+.footer {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #333;
+  border-top: 1px solid #ddd;
+}
+
+.footer p {
+  color: #666;
+}
