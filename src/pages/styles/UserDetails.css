@@ -1,0 +1,66 @@
+/* User Details Page */
+.user-details-container {
+    max-width: 600px;
+    margin: 50px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  .user-details-container h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #6a0dad;
+  }
+  
+  /* User Card */
+  .user-card {
+    padding: 20px;
+    border-radius: 12px;
+    background: rgba(106, 13, 173, 0.05);
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-card p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  
+  .user-card p strong {
+    color: #6a0dad;
+  }
+  
+  /* User Avatar */
+  .user-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 3px solid #6a0dad;
+  }
+  
+  /* Edit Button */
+  .edit-btn {
+    padding: 12px 18px;
+    background-color: #6a0dad;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: 0.3s ease-in-out;
+  }
+  
+  .edit-btn:hover {
+    background-color: #5a0c9c;
+    transform: scale(1.05);
+  }
+  

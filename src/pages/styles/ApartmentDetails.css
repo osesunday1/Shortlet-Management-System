@@ -1,0 +1,53 @@
+.apartment-details {
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .apartment-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 10px 0;
+  }
+  
+  .location, .price, .rating {
+    font-size: 18px;
+    margin: 5px 0;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #444; 
+    text-align: justify;
+    margin: 15px 0;
+    padding: 10px;
+    background: #f9f9f9;
+    border-left: 4px solid #007bff; 
+    border-radius: 5px;
+  }
+  
+  .back-button {
+    padding: 10px 15px;
+    border: none;
+    background: #ddd;
+    cursor: pointer;
+    margin-bottom: 15px;
+  }
+  
+  .reserve-btn {
+    padding: 10px 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
