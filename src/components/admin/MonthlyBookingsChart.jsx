@@ -3,11 +3,12 @@ import * as d3 from "d3";
 import axios from "axios";
 
 const MonthlyBookingsChart = () => {
+  const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const chartRef = useRef();
 
   useEffect(() => {
     const fetchMonthlyData = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/bookings/get-bookings");
+      const res = await axios.get(`${apiUrl}/bookings/get-bookings`);
       const bookings = res.data;
 
       const bookingsByMonth = d3.rollup(

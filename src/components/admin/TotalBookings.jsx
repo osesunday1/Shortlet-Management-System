@@ -3,11 +3,13 @@ import * as d3 from "d3";
 import axios from "axios";
 
 const TotalBookings = () => {
+  
+  const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const ref = useRef();
 
   useEffect(() => {
     const fetchBookings = async () => {
-      const res = await axios.get("http://localhost:5000/api/v1/bookings/get-bookings");
+      const res = await axios.get(`${apiUrl}/bookings/get-bookings`);
       const total = res.data.length;
 
       d3.select(ref.current).selectAll("*").remove(); // Clean old

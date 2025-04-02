@@ -3,7 +3,7 @@ import { AppContext } from "../../context/AppContext";
 import axios from "axios";
 
 const AddBookingComp = () => {
-  const { apiUrl } = useContext(AppContext); // Assuming API URL is stored in context
+  const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const [formData, setFormData] = useState({
     guestName: "",
     email: "",
@@ -27,7 +27,7 @@ const AddBookingComp = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:5000/api/v1/bookings/add-booking`,
+        `${apiUrl}/bookings/add-booking`,
         formData
       );
       setMessage(response.data.message);

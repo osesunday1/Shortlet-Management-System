@@ -4,12 +4,13 @@ import 'react-calendar/dist/Calendar.css';
 import axios from "axios";
 
 const BookingsCalendar = () => {
+  const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const [bookedDates, setBookedDates] = useState([]);
 
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/v1/bookings/get-bookings");
+        const res = await axios.get(`${apiUrl}/bookings/get-bookings`);
         const bookings = res.data;
 
         const allDates = bookings.flatMap(booking => {

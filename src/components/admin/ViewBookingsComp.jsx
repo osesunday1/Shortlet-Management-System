@@ -5,19 +5,21 @@ import { FaEdit, FaTrash } from "react-icons/fa";
 import EditBookingModal from "./EditBookingModal";
 
 const ViewBookingsComp = () => {
+  const apiUrl = import.meta.env.VITE_BACKEND_URL;
   const [bookings, setBookings] = useState([]);
   const [loading, setLoading] = useState(false);
   const [selectedBooking, setSelectedBooking] = useState(null);
   
-  const apiUrl = "http://localhost:5000/api/v1/bookings/get-bookings"; // Direct API URL
-useEffect(() => {
+
+
+  useEffect(() => {
     fetchBookings();
   }, []);
 
   const fetchBookings = async () => {
     setLoading(true);
     try {
-      const res = await axios.get(apiUrl);
+      const res = await axios.get(`${apiUrl}/bookings/get-bookings`);
       setBookings(res.data);
     } catch (err) {
       toast.error("Failed to fetch bookings");
@@ -36,7 +38,7 @@ useEffect(() => {
 
   const handleSaveChanges = async (id, updatedData) => {
     try {
-      const res = await axios.put(`http://localhost:5000/api/v1/bookings/bookings/${id}`, updatedData);
+      const res = await axios.put(`${apiUrl}/bookings/bookings/${id}`, updatedData);
       toast.success("Booking updated successfully");
       setBookings((prev) =>
         prev.map((b) => (b._id === id ? res.data.booking : b))
@@ -50,7 +52,7 @@ useEffect(() => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this booking?")) return;
     try {
-      await axios.delete(`http://localhost:5000/api/v1/bookings/bookings/${id}`);
+      await axios.delete(`${apiUrl}/bookings/bookings/${id}`);
       setBookings(bookings.filter((b) => b._id !== id));
       toast.success("Booking deleted");
     } catch (err) {
