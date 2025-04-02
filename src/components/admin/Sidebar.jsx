@@ -12,6 +12,10 @@ const Sidebar = () => {
         { name: 'Bookings', path: '/admin/view-bookings', icon: assets.my_course_icon },
         { name: 'View Guest', path: '/admin/view-guests', icon: assets.person_tick_icon },
         { name: 'View Apartments', path: '/admin/view-apartments', icon: assets.person_tick_icon },
+        { name: 'View Products', path: '/admin/view-products', icon: assets.person_tick_icon },
+        { name: 'View Inventory', path: '/admin/view-inventory', icon: assets.person_tick_icon },
+        { name: 'Add Inventory', path: '/admin/add-inventory', icon: assets.person_tick_icon },
+        { name: 'Add Products', path: '/admin/add-products', icon: assets.person_tick_icon },
       ];
 
 

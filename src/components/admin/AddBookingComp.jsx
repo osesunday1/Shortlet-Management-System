@@ -45,10 +45,18 @@ const AddBookingComp = () => {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-center text-gray-700 mb-4">Add Booking</h2>
-      {message && <p className="text-center text-green-600 font-medium">{message}</p>}
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="max-w-xl mx-auto p-8 bg-white shadow-2xl rounded-2xl mt-10">
+      <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">
+        📝 Add Booking
+      </h2>
+  
+      {message && (
+        <p className="text-center text-green-600 font-medium mb-4">
+          {message}
+        </p>
+      )}
+  
+      <form onSubmit={handleSubmit} className="space-y-5">
         <input
           type="text"
           name="guestName"
@@ -56,8 +64,9 @@ const AddBookingComp = () => {
           value={formData.guestName}
           onChange={handleChange}
           required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400"
         />
+  
         <input
           type="email"
           name="email"
@@ -65,8 +74,9 @@ const AddBookingComp = () => {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400"
         />
+  
         <input
           type="tel"
           name="phone"
@@ -74,41 +84,46 @@ const AddBookingComp = () => {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent placeholder-gray-400"
         />
+  
         <select
           name="apartment"
           value={formData.apartment}
           onChange={handleChange}
           required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
+          className="w-full p-3 border border-gray-300 rounded-lg bg-white focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
         >
           <option value="">Select Apartment</option>
           <option value="Ivory Pearl">Ivory Pearl</option>
           <option value="Cozy Suites">Cozy Suites</option>
           <option value="Sunset Villa">Sunset Villa</option>
         </select>
-        <input
-          type="date"
-          name="checkInDate"
-          value={formData.checkInDate}
-          onChange={handleChange}
-          required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-        />
-        <input
-          type="date"
-          name="checkOutDate"
-          value={formData.checkOutDate}
-          onChange={handleChange}
-          required
-          className="w-full p-2 border rounded-lg focus:outline-none focus:ring focus:border-blue-300"
-        />
+  
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <input
+            type="date"
+            name="checkInDate"
+            value={formData.checkInDate}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+          />
+          <input
+            type="date"
+            name="checkOutDate"
+            value={formData.checkOutDate}
+            onChange={handleChange}
+            required
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent"
+          />
+        </div>
+  
         <button
           type="submit"
-          className="w-full p-2 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-200"
+          className="w-full p-3 bg-blue-600 text-white font-bold rounded-lg hover:bg-blue-700 transition duration-200"
         >
-          Add Booking
+          ➕ Add Booking
         </button>
       </form>
     </div>
