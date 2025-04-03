@@ -1,59 +1,72 @@
+// Home.jsx
+import { Link } from "react-router-dom";
+import Footer from "./Footer";
+import cabinImg from "../assets/cabin.jpg";
+
 const Home = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 to-purple-50">
+    <div className="min-h-screen bg-white flex flex-col justify-between">
       {/* Hero Section */}
-      <div className="container mx-auto px-6 py-16 text-center">
-        <h1 className="text-5xl font-bold text-gray-800 mb-4">
-          Welcome to Our Land-BNB
-        </h1>
-        <p className="text-xl text-gray-600 mb-8">
-          Effortlessly manage your short-term rentals with our intuitive platform.
-        </p>
-        <button className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
-          Get Started
-        </button>
-      </div>
+      <section
+  className="relative bg-cover bg-center bg-no-repeat h-[90vh] flex items-center justify-center text-white"
+  style={{ backgroundImage: `url(${cabinImg})` }}
+>
+  <div className="bg-black/60 p-10 rounded-lg text-center max-w-2xl shadow-xl">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      Welcome to Land-BNB
+    </h1>
+    <p className="text-lg md:text-xl mb-6">
+      Effortlessly manage your short-term rentals with comfort and clarity.
+    </p>
+    <button className="bg-primary-100 hover:bg-primary-200 cursor-pointer  text-white px-6 py-3 rounded-lg transition ">
+      Get Started
+    </button>
+  </div>
+</section>
 
       {/* Features Section */}
-      <div className="container mx-auto px-6 py-12">
-        <h2 className="text-3xl font-bold text-gray-800 text-center mb-8">
-          Features
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Feature 1 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Easy Booking</h3>
-            <p className="text-gray-600">
-              Manage bookings seamlessly with our user-friendly interface.
-            </p>
-          </div>
+      <section className="py-16 px-6 bg-gray-50">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What We Offer</h2>
+          <div className="grid md:grid-cols-3 gap-10">
+            {/* Feature 1 */}
+            <div className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+              <img
+                src="https://img.icons8.com/ios-filled/100/booking.png"
+                alt="Easy Booking"
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">Streamlined Booking</h3>
+              <p className="text-gray-600">Book, track, and manage your rentals with just a few clicks.</p>
+            </div>
 
-          {/* Feature 2 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Real-Time Analytics</h3>
-            <p className="text-gray-600">
-              Track your property performance with real-time data and insights.
-            </p>
-          </div>
+            {/* Feature 2 */}
+            <div className="bg-white hover:bg-primary-200 hover:text-white cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+              <img
+                src="https://img.icons8.com/ios-filled/100/combo-chart.png"
+                alt="Analytics"
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2 hover">Powerful Insights</h3>
+              <p className="text-gray-600">Visualize your revenue, occupancy, and growth in real-time.</p>
+            </div>
 
-          {/* Feature 3 */}
-          <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-            <h3 className="text-xl font-semibold text-gray-800 mb-4">Secure Payments</h3>
-            <p className="text-gray-600">
-              Enjoy secure and hassle-free payment processing.
-            </p>
+            {/* Feature 3 */}
+            <div className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+              <img
+                src="https://img.icons8.com/ios-filled/100/security-checked.png"
+                alt="Secure Payments"
+                className="mx-auto mb-4"
+              />
+              <h3 className="text-xl font-semibold mb-2">Secure Transactions</h3>
+              <p className="text-gray-600">Ensure safe payments and manage finances effortlessly.</p>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Footer */}
-      <div className="bg-gray-800 text-white py-8 mt-12">
-        <div className="container mx-auto px-6 text-center">
-          <p className="text-gray-400">
-            &copy; 2025 Shortlet Management System. All rights reserved.
-          </p>
-        </div>
-      </div>
+      <Footer />
     </div>
   );
 };

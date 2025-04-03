@@ -14,6 +14,7 @@ import ViewProductsComp from './components/admin/ViewProductsComp';
 import AddProductComp from './components/admin/AddProductComp';
 import AddInventoryComp from './components/admin/AddInventoryComp';
 import ViewInventoryComp from './components/admin/ViewInventoryComp';
+import About from './pages/About';
 
 
 
@@ -29,7 +30,9 @@ function App() {
       <Navbar/>
      <Routes>
      <Route path='/' element={ <Home />} />
+     <Route path='about' element={ <About />} />
      <Route path="/signin" element={<SignIn />} />
+     {/*<Route path="/reservation" element={<Rr />} />*/}
 
      <Route path='/admin' element={ <Admin /> }>
             <Route index element={<Dashboard />} />

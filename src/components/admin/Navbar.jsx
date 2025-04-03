@@ -41,11 +41,14 @@ const Navbar = () => {
             <Link to="/" className="hover:text-blue-600 transition duration-200">
               Home
             </Link>
+            <Link to="about" className="hover:text-blue-600 transition duration-200">
+              ABOUT
+            </Link>
             <Link to="/" className="hover:text-blue-600 transition duration-200">
               Reservation
             </Link>
             <Link to="/signin">
-              <button className="bg-blue-600 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
+              <button className="bg-primary-100 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
                 Sign In
               </button>
             </Link>
