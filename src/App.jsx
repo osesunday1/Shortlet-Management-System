@@ -12,10 +12,18 @@ import ViewApartments from './pages/admin/ViewApartments'
 import Footer from './components/admin/Footer';
 import ApartmentDetail from './pages/user/ApartmentDetail';
 import ApartmentListing from './pages/user/ApartmentListing';
+import StartTrial from './pages/startTrialPage';
+import SmartBookingsPage from './pages/smartBookings';
+import AIAnalyticsPage from './pages/aiAnalytics';
+import SecurePaymentsPage from './pages/securePayments';
+import About from './pages/About';
+import Contact from './pages/Contact';
 import BookingSuccess from './pages/user/BookingSuccess';
 import InventoryItems from './pages/inventory/InventoryItems';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import OurTeamPage from './pages/OurTeamPage';
+import OurMissionPage from './pages/OurMissionPage';
 
 function App() {
   return (
@@ -34,9 +42,19 @@ function App() {
           <Route path='view-apartments' element={<ViewApartments/>}/>
         </Route>
 
-        <Route path='/unauthorized' element={<Unauthorized/>} />
+        <Route path="/about" element={<About/>} >
+          <Route path='our-team' element={<OurTeamPage/>}></Route>
+          <Route path='our-mission' element={<OurMissionPage/>}></Route>
+        </Route>
+
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/start-trial" element={<StartTrial/>} />
+        <Route path='/smart-bookings' element={<SmartBookingsPage/>} />
+        <Route path='/ai-analytics' element={<AIAnalyticsPage/>} />
+        <Route path='/secure-payments' element={<SecurePaymentsPage/>} />
         <Route path='/booking-success' element={<BookingSuccess />} />
         <Route path='/inventory' element={<InventoryItems />} />
+        <Route path='/unauthorized' element={<Unauthorized/>} />
       </Routes>
       <ToastContainer />
     </div>

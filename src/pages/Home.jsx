@@ -101,11 +101,15 @@ const Home = () => {
             </motion.div>
             
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-              <button 
-                className="px-8 py-4 border-2 border-white/20 text-white rounded-xl hover:border-white/40 hover:bg-white/10 backdrop-blur-sm"
+              <a
+                href="https://www.youtube.com/watch?v=SN5n4tCd1ZY"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Watch Demo
-              </button>
+                <button className="px-8 py-4 border-2 border-white/20 text-white rounded-xl hover:border-white/40 hover:bg-white/10 backdrop-blur-sm">
+                  Watch Demo
+                </button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -165,12 +169,22 @@ const Home = () => {
                     "Bank-level security & instant payouts made easy"
                   ][index]}
                 </p>
-                <motion.button 
+                <motion.button
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-2 font-medium"
                   style={{ color: feature.color }}
                 >
+                  <Link
+                  to={
+                    feature.title === "Smart Booking"
+                      ? "/smart-bookings"
+                      : feature.title === "AI Analytics"
+                      ? "/ai-analytics"
+                      : "/secure-payments"
+                  }
+                >
                   Learn more <FiArrowRight />
+                  </Link>
                 </motion.button>
               </motion.div>
             </Tilt>
@@ -193,24 +207,26 @@ const Home = () => {
           <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             Join thousands of successful property managers worldwide
           </p>
-          <motion.div 
+          <motion.div
             className="flex justify-center gap-4"
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 20 }}
           >
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 bg-white text-[#63c419] rounded-xl font-semibold shadow-xl hover:shadow-2xl"
             >
-              Start Free Trial
+              <Link to={"/start-trial"}>Shortlet Premium</Link>
             </motion.button>
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="px-8 py-4 border-2 border-white text-white rounded-xl hover:bg-white/10"
             >
+              <Link to={'/contact'}>
               Contact Sales
+              </Link>
             </motion.button>
           </motion.div>
         </div>
