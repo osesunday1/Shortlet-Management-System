@@ -9,7 +9,7 @@ const Home = () => {
       {/* Hero Section */}
       <section
   className="relative bg-cover bg-center bg-no-repeat h-[90vh] flex items-center justify-center text-white"
-  style={{ backgroundImage: `url(${cabinImg})` }}
+  style={{ backgroundImage: "url('/cabin.jpg')" }}
 >
   <div className="bg-black/60 p-10 rounded-lg text-center max-w-2xl shadow-xl">
     <h1 className="text-4xl md:text-5xl font-bold mb-4">
