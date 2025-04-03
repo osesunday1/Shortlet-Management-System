@@ -29,8 +29,8 @@ const StartTrial = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <div className="p-8 bg-white shadow-lg rounded-lg w-full max-w-md">
-        <h1 className="text-2xl font-bold mb-4">Start Your 30-Day Free Trial</h1>
-        <p className="mb-6 text-gray-600">Try all premium features for free. Cancel anytime.</p>
+        <h1 className="text-2xl font-bold ml-4 mb-4">Subscribe for Shortlet Premium</h1>
+        <p className="ml-10 mb-6 text-gray-600">Try all premium features. Cancel anytime.</p>
   
         <div className="mb-8 space-y-6">
           <h2 className="text-xl font-semibold text-gray-800 dark:text-white text-center">
