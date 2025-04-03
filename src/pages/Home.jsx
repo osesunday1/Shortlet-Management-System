@@ -2,14 +2,13 @@
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
-
 const Home = () => {
   return (
     <div className="min-h-screen bg-white flex flex-col justify-between">
       {/* Hero Section */}
       <section
   className="relative bg-cover bg-center bg-no-repeat h-[90vh] flex items-center justify-center text-white"
-  style={{ backgroundImage: "url('/cabin.jpg')" }}
+  style={{ backgroundImage: "url('/Cabin.jpg')" }}
 >
   <div className="bg-black/60 p-10 rounded-lg text-center max-w-2xl shadow-xl">
     <h1 className="text-4xl md:text-5xl font-bold mb-4">
