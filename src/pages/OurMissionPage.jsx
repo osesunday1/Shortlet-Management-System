@@ -59,7 +59,7 @@ const OurMissionPage = () => {
         <motion.div
           className="bg-white p-6 rounded-xl shadow border-l-4 border-indigo-500 text-gray-700 italic"
         >
-          “When we make renting better, we improve lives. That’s our ultimate mission.” — <strong>Rental Solutions Vision Team</strong>
+          “When we make renting better, we improve lives. That's our ultimate mission.” — <strong>Rental Solutions Vision Team</strong>
         </motion.div>
       </div>
     </motion.div>

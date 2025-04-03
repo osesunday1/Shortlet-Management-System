@@ -19,10 +19,7 @@ const Contact = () => {
     setMessageSent("");
     setErrorMessage("");
 
-    // Here you would typically send the form data to an API endpoint.
-    // For now, we'll simulate a successful submission.
     try {
-      // Simulate sending message
       setMessageSent("Your message has been sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
@@ -45,7 +42,6 @@ const Contact = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="space-y-4">
-          {/* Name */}
           <input
             type="text"
             name="name"
@@ -56,7 +52,6 @@ const Contact = () => {
             className="w-full p-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
           />
 
-          {/* Email */}
           <input
             type="email"
             name="email"
@@ -67,7 +62,6 @@ const Contact = () => {
             className="w-full p-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
           />
 
-          {/* Message */}
           <textarea
             name="message"
             placeholder="Your Message"
@@ -77,7 +71,6 @@ const Contact = () => {
             rows="4"
             className="w-full p-4 border-2 border-gray-300 rounded-xl focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all"
           />
-
         </div>
 
         <button
@@ -88,7 +81,6 @@ const Contact = () => {
         </button>
       </form>
 
-      {/* Operating Hours */}
       <div className="mt-8">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Operating Hours</h3>
         <ul className="list-disc pl-6 text-gray-700">
@@ -98,17 +90,18 @@ const Contact = () => {
         </ul>
       </div>
 
-      {/* Google Map */}
+      {/* Google Map for Fanshawe College */}
       <div className="mt-8">
         <h3 className="text-2xl font-semibold text-gray-800 mb-4">Find Us</h3>
         <div className="w-full h-64 rounded-xl overflow-hidden">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?q=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5834.702802471468!2d-81.20843312228996!3d43.01299019999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882eed0db33e1e9f%3A0xafcae4298924fa54!2sFanshawe%20College!5e0!3m2!1sen!2sca!4v1743706707830!5m2!1sen!2sca"
             width="100%"
             height="100%"
             style={{ border: 0 }}
             allowFullScreen=""
             loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
             title="Map Location"
           ></iframe>
         </div>

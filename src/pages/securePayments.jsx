@@ -7,7 +7,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const SecurePaymentsPage = () => {
+const SecurePayments = () => {
   return (
     <motion.div
       className="bg-gradient-to-b from-white via-[#fef7f7] to-white text-gray-800 min-h-screen pt-20 pb-24 px-6"
@@ -16,7 +16,6 @@ const SecurePaymentsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
-        {/* Header */}
         <motion.div className="flex items-center gap-4" variants={fadeInUp} initial="hidden" animate="visible">
           <div className="bg-[#fc7177] p-3 rounded-full text-white shadow-lg">
             <FiShield size={24} />
@@ -26,7 +25,6 @@ const SecurePaymentsPage = () => {
           </h1>
         </motion.div>
 
-        {/* Hero Image */}
         <motion.img
           src="https://images.unsplash.com/photo-1563013544-824ae1b704d3"
           alt="Secure payment"
@@ -36,7 +34,6 @@ const SecurePaymentsPage = () => {
           animate="visible"
         />
 
-        {/* Overview */}
         <motion.div
           className="bg-white p-6 rounded-xl shadow-md space-y-6"
           variants={fadeInUp}
@@ -55,7 +52,6 @@ const SecurePaymentsPage = () => {
           </ul>
         </motion.div>
 
-        {/* Feature Blocks */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={fadeInUp}
@@ -93,7 +89,7 @@ const SecurePaymentsPage = () => {
           animate="visible"
         >
           <p className="text-base italic text-gray-700">
-            “I’ve never had to worry about payments since using this system — it’s fast and completely transparent.” — <strong>Samantha A., Property Manager</strong>
+            “I've never had to worry about payments since using this system — it's fast and completely transparent.” — <strong>Samantha A., Property Manager</strong>
           </p>
         </motion.div>
       </div>
@@ -101,4 +97,4 @@ const SecurePaymentsPage = () => {
   );
 };
 
-export default SecurePaymentsPage;
+export default SecurePayments;

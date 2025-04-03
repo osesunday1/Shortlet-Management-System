@@ -25,15 +25,6 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">
-          {/* Inventory Button */}
-          <button
-            onClick={() => navigate("/inventory")}
-            className="flex items-center gap-2 relative text-white font-semibold text-lg hover:text-gray-200 px-3 py-2 transition-all duration-300 group"
-          >
-            <FiPackage className="text-xl" />
-            Inventory
-            <span className="absolute bottom-0 left-0 w-0 h-1 bg-white transition-all duration-300 group-hover:w-full"></span>
-          </button>
 
           {["About", "Contact"].map((item) => (
             <button
@@ -77,13 +68,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div className="md:hidden flex items-center gap-4">
-          {/* Add Inventory button for mobile */}
-          <button
-            onClick={() => navigate("/inventory")}
-            className="p-3 bg-white/20 rounded-lg hover:bg-white/30 transition-all duration-300"
-          >
-            <FiPackage className="w-7 h-7 text-white" />
-          </button>
+         
           <button className="p-3 bg-white/20 rounded-lg hover:bg-white/30 transition-all duration-300">
             <svg
               className="w-7 h-7 text-white"

@@ -7,7 +7,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const SmartBookingsPage = () => {
+const SmartBookings = () => {
   return (
     <motion.div
       className="bg-gradient-to-b from-white via-[#f3f4f6] to-white text-gray-800 min-h-screen pt-20 pb-24 px-6"
@@ -16,7 +16,6 @@ const SmartBookingsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
-        {/* Header */}
         <motion.div className="flex items-center gap-4" variants={fadeInUp} initial="hidden" animate="visible">
           <div className="bg-[#63c419] p-3 rounded-full text-white shadow-lg">
             <FiCalendar size={24} />
@@ -26,7 +25,6 @@ const SmartBookingsPage = () => {
           </h1>
         </motion.div>
 
-        {/* Hero Image */}
         <motion.img
           src="https://images.unsplash.com/photo-1516321497487-e288fb19713f"
           alt="Calendar and booking"
@@ -36,7 +34,6 @@ const SmartBookingsPage = () => {
           animate="visible"
         />
 
-        {/* Overview Section */}
         <motion.div
           className="bg-white p-6 rounded-xl shadow-md space-y-6"
           variants={fadeInUp}
@@ -55,7 +52,6 @@ const SmartBookingsPage = () => {
           </ul>
         </motion.div>
 
-        {/* Features Grid */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={fadeInUp}
@@ -85,7 +81,6 @@ const SmartBookingsPage = () => {
           ))}
         </motion.div>
 
-        {/* Final Testimonial */}
         <motion.div
           className="bg-[#fef9f9] p-6 rounded-xl shadow border-l-4 border-[#63c419]"
           variants={fadeInUp}
@@ -101,4 +96,4 @@ const SmartBookingsPage = () => {
   );
 };
 
-export default SmartBookingsPage;
+export default SmartBookings;

@@ -56,7 +56,6 @@ const Home = () => {
         {darkMode ? <FiSun className="text-[#fc7177]" /> : <FiMoon className="text-[#63c419]" />}
       </button>
 
-      {/* Hero Section */}
       <motion.section
         ref={heroRef}
         initial="hidden"
@@ -115,7 +114,6 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* Features Section */}
       <motion.section
         ref={featuresRef}
         initial="hidden"
@@ -135,7 +133,7 @@ const Home = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 max-w-6xl mx-auto">
           {[ 
             { icon: <FiCalendar />, title: "Smart Booking", color: PRIMARY_COLORS.green },
-            { icon: <FiTrendingUp />, title: "AI Analytics", color: PRIMARY_COLORS.purple },
+            { icon: <FiTrendingUp />, title: "Inventory Insights", color: PRIMARY_COLORS.purple },
             { icon: <FiShield />, title: "Secure Payments", color: PRIMARY_COLORS.pink }
           ].map((feature, index) => (
             <Tilt key={index} tiltMaxAngleX={5} tiltMaxAngleY={5}>
@@ -164,8 +162,8 @@ const Home = () => {
                   darkMode ? 'text-gray-300' : 'text-gray-600'
                 }`}>
                   {[
-                    "AI-powered pricing & automated reservations",
-                    "Real-time analytics & revenue optimization",
+                    "Convenient pricing & automated reservations",
+                    "Track availability, restocking, and maintenance across all listings",
                     "Bank-level security & instant payouts made easy"
                   ][index]}
                 </p>
@@ -178,8 +176,8 @@ const Home = () => {
                   to={
                     feature.title === "Smart Booking"
                       ? "/smart-bookings"
-                      : feature.title === "AI Analytics"
-                      ? "/ai-analytics"
+                      : feature.title === "Inventory Insights"
+                      ? "/inventory-insights"
                       : "/secure-payments"
                   }
                 >
@@ -192,7 +190,6 @@ const Home = () => {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
       <motion.section
         ref={ctaRef}
         initial="hidden"

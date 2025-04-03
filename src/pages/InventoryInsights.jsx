@@ -1,5 +1,5 @@
 import React from "react";
-import { FiTrendingUp, FiBarChart2, FiEye, FiLayers } from "react-icons/fi";
+import { FiBox, FiClock, FiClipboard, FiTool } from "react-icons/fi";
 import { motion } from "framer-motion";
 
 const fadeInUp = {
@@ -7,7 +7,7 @@ const fadeInUp = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
-const AIAnalyticsPage = () => {
+const InventoryInsights = () => {
   return (
     <motion.div
       className="bg-gradient-to-b from-white via-[#f3f4f6] to-white text-gray-800 min-h-screen pt-20 pb-24 px-6"
@@ -16,46 +16,42 @@ const AIAnalyticsPage = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="max-w-5xl mx-auto space-y-16">
-        {/* Header */}
         <motion.div className="flex items-center gap-4" variants={fadeInUp} initial="hidden" animate="visible">
           <div className="bg-[#c365fd] p-3 rounded-full text-white shadow-lg">
-            <FiTrendingUp size={24} />
+            <FiBox size={24} />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-[#c365fd] to-[#63c419] bg-clip-text text-transparent">
-            AI Analytics
+            Inventory Insights
           </h1>
         </motion.div>
 
-        {/* Hero Image */}
-        <motion.img
-          src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7"
-          alt="Analytics dashboard"
+       <motion.img
+          src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
+          alt="Inventory dashboard"
           className="rounded-2xl shadow-xl w-full object-cover"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
         />
 
-        {/* Overview */}
         <motion.div
           className="bg-white p-6 rounded-xl shadow-md space-y-6"
           variants={fadeInUp}
           initial="hidden"
           animate="visible"
         >
-          <h2 className="text-2xl font-semibold">See the Bigger Picture</h2>
+          <h2 className="text-2xl font-semibold">Optimize Your Operations</h2>
           <p className="text-base">
-            Make smarter business decisions with insights derived from your rental data. Our AI engine monitors trends, predicts outcomes, and suggests adjustments to help you grow faster.
+            Stay on top of your shortlet inventory with real-time visibility into availability, turnover, and essential supplies. Get proactive alerts and streamline your daily operations with ease.
           </p>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Smart pricing suggestions that update with demand</li>
-            <li>Live occupancy trends with predictive analytics</li>
-            <li>Revenue breakdowns by time, property, and location</li>
-            <li>Performance benchmarking with top hosts in your area</li>
+            <li>Live availability tracking across all properties</li>
+            <li>Automated turnover planning for check-in/out transitions</li>
+            <li>Maintenance reminders to keep units guest-ready</li>
+            <li>Monitor consumables like linens, toiletries, and cleaning stock</li>
           </ul>
         </motion.div>
 
-        {/* Feature Highlights */}
         <motion.div
           className="grid grid-cols-1 md:grid-cols-2 gap-6"
           variants={fadeInUp}
@@ -63,17 +59,17 @@ const AIAnalyticsPage = () => {
           animate="visible"
         >
           {[{
-            icon: <FiBarChart2 />,
-            title: "Revenue Forecasts",
-            desc: "See your potential income week-over-week and adjust strategies accordingly."
+            icon: <FiClipboard />,
+            title: "Unit Availability",
+            desc: "Quickly see which units are occupied, vacant, or need attention."
           }, {
-            icon: <FiEye />,
-            title: "Market Visibility",
-            desc: "Know where your listing ranks and how often it’s viewed across platforms."
+            icon: <FiClock />,
+            title: "Turnover Scheduling",
+            desc: "Efficiently manage cleaning and prep time between bookings."
           }, {
-            icon: <FiLayers />,
-            title: "Multi-property View",
-            desc: "Compare analytics across all your listings in a single dashboard."
+            icon: <FiTool />,
+            title: "Maintenance Monitoring",
+            desc: "Stay ahead of issues with scheduled and predictive upkeep alerts."
           }].map((item, i) => (
             <div key={i} className="bg-white rounded-xl p-5 shadow hover:shadow-lg transition">
               <div className="flex items-center gap-3 mb-2 text-[#c365fd]">
@@ -85,7 +81,6 @@ const AIAnalyticsPage = () => {
           ))}
         </motion.div>
 
-        {/* Quote */}
         <motion.div
           className="bg-[#f5f0fb] p-6 rounded-xl shadow border-l-4 border-[#c365fd]"
           variants={fadeInUp}
@@ -93,7 +88,7 @@ const AIAnalyticsPage = () => {
           animate="visible"
         >
           <p className="text-base italic text-gray-700">
-            “The AI dashboard changed how I price and plan. Bookings went up, and so did my confidence.” — <strong>M. Lee, Superhost</strong>
+            “The inventory dashboard keeps me organized and ready for anything. No more last-minute surprises.” — <strong>J. Moreno, Host Partner</strong>
           </p>
         </motion.div>
       </div>
@@ -101,4 +96,4 @@ const AIAnalyticsPage = () => {
   );
 };
 
-export default AIAnalyticsPage;
+export default InventoryInsights;
