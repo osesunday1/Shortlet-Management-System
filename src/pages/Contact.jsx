@@ -1,9 +1,8 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
-import Footer from "./Footer";
 
-const Reservation = () => {
+const Contact = () => {
   const formRef = useRef();
   const [loading, setLoading] = useState(false);
 
@@ -12,7 +11,7 @@ const Reservation = () => {
     setLoading(true);
 
     emailjs
-        .sendForm(
+    .sendForm(
         "service_3dqhbnm",      // Replace with your EmailJS service ID
         "template_g3vxmyo",     // Replace with your EmailJS template ID
         formRef.current,
@@ -22,12 +21,12 @@ const Reservation = () => {
       .then(
         () => {
           setLoading(false);
-          toast.success("Reservation sent successfully!");
+          toast.success("Message sent successfully!");
           formRef.current.reset();
         },
         (error) => {
           setLoading(false);
-          toast.error("Error sending reservation.");
+          toast.error("Failed to send message.");
           console.error(error);
         }
       );
@@ -35,8 +34,8 @@ const Reservation = () => {
 
   return (
     <>
-    <div className="max-w-xl mx-auto mt-10 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100">
-      <h2 className="text-2xl font-bold mb-6 text-center">Reservation Form</h2>
+    <div className="max-w-xl mx-auto mt-12 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100">
+      <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
       <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
         <input
           type="text"
@@ -48,28 +47,22 @@ const Reservation = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email Address"
+          placeholder="Your Email"
           required
           className="w-full p-3 border rounded"
         />
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <input
-            type="date"
-            name="checkin"
-            required
-            className="w-full p-3 border rounded"
-          />
-          <input
-            type="date"
-            name="checkout"
-            required
-            className="w-full p-3 border rounded"
-          />
-        </div>
+        <input
+          type="text"
+          name="subject"
+          placeholder="Subject"
+          required
+          className="w-full p-3 border rounded"
+        />
         <textarea
           name="message"
-          placeholder="Additional Notes (e.g. number of guests, preferences)"
-          rows="4"
+          rows="5"
+          placeholder="Your message"
+          required
           className="w-full p-3 border rounded"
         ></textarea>
         <input
@@ -80,16 +73,14 @@ const Reservation = () => {
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-primary-100 text-white py-3 rounded hover:bg-primary-200 cursor-pointer transition"
+          className="w-full bg-primary-100 text-white py-3 rounded hover:bg-primary transition"
         >
-          {loading ? "Sending..." : "Submit Reservation"}
+          {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
-      
     </div>
-    <Footer/>
     </>
   );
 };
 
-export default Reservation;
+export default Contact;

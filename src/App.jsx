@@ -15,6 +15,9 @@ import AddProductComp from './components/admin/AddProductComp';
 import AddInventoryComp from './components/admin/AddInventoryComp';
 import ViewInventoryComp from './components/admin/ViewInventoryComp';
 import About from './pages/About';
+import Reservation from './pages/Reservation';
+import Contact from './pages/Contact';
+import Listings from './pages/Listings';
 
 
 
@@ -32,7 +35,9 @@ function App() {
      <Route path='/' element={ <Home />} />
      <Route path='about' element={ <About />} />
      <Route path="/signin" element={<SignIn />} />
-     {/*<Route path="/reservation" element={<Rr />} />*/}
+     <Route path="/reservation" element={<Reservation/>} />
+     <Route path="/contact" element={<Contact/>} />
+     <Route path="/listings" element={<Listings/>} />
 
      <Route path='/admin' element={ <Admin /> }>
             <Route index element={<Dashboard />} />

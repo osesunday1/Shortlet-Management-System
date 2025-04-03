@@ -1,8 +1,14 @@
 import Footer from "./Footer";
-
+import { useNavigate } from "react-router-dom";
 // About.jsx
 const About = () => {
+
+  
+
+
+
     return (
+      <>
         <div className="min-h-screen bg gray text-gray-800 py-16 px-6">
       {/* Intro */}
         {/* Intro */}
@@ -24,45 +30,56 @@ const About = () => {
   
         {/* Team */}
         <section className="max-w-6xl mx-auto mb-20 bg-white rounded-xl shadow-2xl border-b-4 border-primary-100 p-8">
-          <h2 className="text-2xl font-semibold text-center mb-10">Meet the Team</h2>
-          <div className="grid gap-8 md:grid-cols-3">
-            {/* Team Member 1 */}
-            <div className="bg-white p-6 rounded-lg shadow text-center shadow-md rounded-xl ">
-              <img
-                src="https://via.placeholder.com/100"
-                alt="Founder"
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-bold">Oseyenbhin Sunday</h3>
-              <p className="text-sm text-gray-500">Founder & Full Stack Developer</p>
-            </div>
-  
-            {/* Team Member 2 */}
-            <div className="bg-white p-6 rounded-lg shadow text-center shadow-md rounded-xl ">
-              <img
-                src="https://i.postimg.cc/FsWLGhN6/Whats-App-Image-2025-04-03-at-16-20-54.jpg"
-                alt="Product Manager"
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-bold">Yuvraj Singh</h3>
-              <p className="text-sm text-gray-500">Software Engineer</p>
-            </div>
-  
-            {/* Team Member 3 */}
-            <div className="bg-white p-6 rounded-lg shadow text-center shadow-md rounded-xl ">
-              <img
-                src="https://i.postimg.cc/BbZjcVys/ose.jpg"
-                alt="UI/UX Designer"
-                className="rounded-full mx-auto mb-4"
-              />
-              <h3 className="text-lg font-bold">Oseyenbhin Sunday</h3>
-              <p className="text-sm text-gray-500">Master Startegist</p>
-            </div>
-          </div>
-        </section>
-         {/* Footer */}
-              <Footer />
+  <h2 className="text-2xl font-semibold text-center mb-10">Meet the Team</h2>
+  <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+    {/* Repeatable Card */}
+    {[
+      {
+        name: "Jaseem Ismail",
+        role: "Founder & Full Stack Developer",
+        img: "https://i.postimg.cc/YSwD26ZY/qqweewq.jpg",
+      },
+      {
+        name: "Yuvraj Singh",
+        role: "Software Engineer",
+        img: "https://i.postimg.cc/FsWLGhN6/Whats-App-Image-2025-04-03-at-16-20-54.jpg",
+      },
+      {
+        name: "Oseyenbhin Sunday",
+        role: "Master Strategist",
+        img: "https://i.postimg.cc/BbZjcVys/ose.jpg",
+      },
+      {
+        name: "Alwin Antony",
+        role: "Software Engineer",
+        img: "https://i.postimg.cc/63FYSCr8/Whats-App-Image-2025-04-03-at-17-18-31.jpg",
+      },
+      {
+        name: "Ayush BK",
+        role: "Full Stack Developer",
+        img: "https://i.postimg.cc/JnzqtPqD/Whats-App-Image-2025-04-03-at-17-17-32.jpg",
+      },
+    ].map((member, index) => (
+      <div
+        key={index}
+        className="bg-white p-4 rounded-lg shadow text-center hover:shadow-lg transition"
+      >
+        <img
+          src={member.img}
+          alt={member.name}
+          className="rounded-full mx-auto mb-3 w-24 h-24 object-cover border-4 border-primary-100"
+        />
+        <h3 className="text-md font-bold">{member.name}</h3>
+        <p className="text-xs text-gray-500">{member.role}</p>
       </div>
+    ))}
+  </div>
+</section>
+         
+      </div>
+      {/* Footer */}
+      <Footer />
+      </>
     );
   };
   
