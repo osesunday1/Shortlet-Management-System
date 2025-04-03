@@ -55,7 +55,7 @@ const About = () => {
                 alt="UI/UX Designer"
                 className="rounded-full mx-auto mb-4"
               />
-              <h3 className="text-lg font-bold">Alwin </h3>
+              <h3 className="text-lg font-bold">Oseyenbhin Sunday</h3>
               <p className="text-sm text-gray-500">Master Startegist</p>
             </div>
           </div>
