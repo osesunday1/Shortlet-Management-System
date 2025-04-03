@@ -1,7 +1,7 @@
 // Home.jsx
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-import cabinImg from "../assets/cabin.jpg";
+
 
 const Home = () => {
   return (
