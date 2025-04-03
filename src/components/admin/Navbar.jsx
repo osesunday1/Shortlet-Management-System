@@ -45,7 +45,7 @@ const Navbar = () => {
               ABOUT
             </Link>
             <Link to="/" className="hover:text-blue-600 transition duration-200">
-              Reservation
+              Reservations
             </Link>
             <Link to="/signin">
               <button className="bg-primary-100 text-white px-5 py-2 rounded-lg font-semibold hover:bg-blue-700 transition duration-300">
