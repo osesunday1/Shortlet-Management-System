@@ -1,8 +1,9 @@
 // Home.jsx
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
-
+import { useNavigate } from "react-router-dom";
 const Home = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-white flex flex-col justify-between">
       {/* Hero Section */}
@@ -17,7 +18,7 @@ const Home = () => {
     <p className="text-lg md:text-xl mb-6">
       Effortlessly manage your short-term rentals with comfort and clarity.
     </p>
-    <button className="bg-primary-100 hover:bg-primary-200 cursor-pointer  text-white px-6 py-3 rounded-lg transition ">
+    <button onClick={() => navigate("/reservation")} className="bg-primary-100 hover:bg-primary-200 cursor-pointer  text-white px-6 py-3 rounded-lg transition ">
       Get Started
     </button>
   </div>
