@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import emailjs from "emailjs-com";
 import { toast } from "react-toastify";
+import Footer from "./Footer";
 
 const Contact = () => {
   const formRef = useRef();
@@ -79,6 +80,7 @@ const Contact = () => {
         </button>
       </form>
     </div>
+    <Footer/>
     </>
   );
 };

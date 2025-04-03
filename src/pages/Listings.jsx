@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import Footer from "./Footer";
 
 const apartments = [
   {
@@ -49,6 +50,7 @@ const Listings = () => {
   const navigate = useNavigate();
 
   return (
+    <>
     <div className="min-h-screen bg-gray py-16 px-6">
       <div className="max-w-7xl mx-auto ">
         <h2 className="text-4xl font-bold text-center mb-12 text-gray-800">
@@ -78,6 +80,8 @@ const Listings = () => {
         </div>
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
