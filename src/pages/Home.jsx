@@ -18,7 +18,7 @@ const Home = () => {
     <p className="text-lg md:text-xl mb-6">
       Effortlessly manage your short-term rentals with comfort and clarity.
     </p>
-    <button onClick={() => navigate("/reservation")} className="bg-primary-100 hover:bg-primary-200 cursor-pointer  text-white px-6 py-3 rounded-lg transition ">
+    <button onClick={() => navigate("/listings")} className="bg-primary-100 hover:bg-primary-200 cursor-pointer  text-white px-6 py-3 rounded-lg transition ">
       Get Started
     </button>
   </div>
