@@ -30,18 +30,18 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">What We Offer</h2>
           <div className="grid md:grid-cols-3 gap-10">
             {/* Feature 1 */}
-            <div className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+            <div onClick={() => navigate("/reservation")} className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
               <img
                 src="https://img.icons8.com/ios-filled/100/booking.png"
                 alt="Easy Booking"
                 className="mx-auto mb-4"
               />
-              <h3 className="text-xl font-semibold mb-2">Streamlined Booking</h3>
+              <h3 className="text-xl font-semibold mb-2">Easy Booking</h3>
               <p className="text-gray-600">Book, track, and manage your rentals with just a few clicks.</p>
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white hover:bg-primary-200 hover:text-white cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+            <div onClick={() => navigate("/listings")} className="bg-white hover:bg-primary-200 hover:text-white cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
               <img
                 src="https://img.icons8.com/ios-filled/100/combo-chart.png"
                 alt="Analytics"
@@ -52,7 +52,7 @@ const Home = () => {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
+            <div onClick={() => navigate("/about")} className="bg-white hover:text-white hover:bg-primary-200 cursor-pointer rounded-xl shadow-md p-6 text-center hover:shadow-lg transition border border-primary-200">
               <img
                 src="https://img.icons8.com/ios-filled/100/security-checked.png"
                 alt="Secure Payments"
