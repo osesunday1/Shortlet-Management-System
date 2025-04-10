@@ -35,9 +35,9 @@ const Contact = () => {
 
   return (
     <>
-    <div className="max-w-xl mx-auto mt-12 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100">
+    <div className="max-w-xl mx-auto mt-12 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100 mb-45">
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
-      <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
+      <form ref={formRef} onSubmit={sendEmail} className="space-y-4 ">
         <input
           type="text"
           name="name"

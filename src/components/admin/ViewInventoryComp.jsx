@@ -108,7 +108,7 @@ const ViewInventoryComp = () => {
                   <td className="py-3 px-6">{record.client.guestName}</td>
                   <td className="py-3 px-6">{record.product.name}</td>
                   <td className="py-3 px-6">{record.quantity}</td>
-                  <td className="py-3 px-6">₦{record.totalAmount}</td>
+                  <td className="py-3 px-6">${record.totalAmount}</td>
                   <td className="py-3 px-6 flex justify-center gap-3">
                     <button
                       onClick={() => handleEditClick(record)}
