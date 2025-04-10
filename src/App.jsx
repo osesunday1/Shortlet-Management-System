@@ -18,7 +18,8 @@ import About from './pages/About';
 import Reservation from './pages/Reservation';
 import Contact from './pages/Contact';
 import Listings from './pages/Listings';
-
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
   return (
     
     <div className='text-default min-h-screen bg-gradient-to-r from-violet-200 to-pink-200 min-h-screen '>
+      <ToastContainer position="top-right" autoClose={3000} />
       <Navbar/>
      <Routes>
      <Route path='/' element={ <Home />} />
