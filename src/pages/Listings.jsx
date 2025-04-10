@@ -4,7 +4,7 @@ import Footer from "./Footer";
 const apartments = [
   {
     id: 1,
-    title: "Ivory Pearl Suite",
+    title: "Ivory Pearl",
     img: "/a1.jpg",
     price: "$100/night",
     desc: "A luxurious escape with a sleek modern interior and premium amenities.",
@@ -18,28 +18,28 @@ const apartments = [
   },
   {
     id: 3,
-    title: "Urban Retreat",
+    title: "Skyline Loft",
     img: "/a3.jpg",
     price: "$90/night",
     desc: "Stylish city apartment ideal for business travelers and explorers.",
   },
   {
     id: 4,
-    title: "The Nest",
+    title: "Sunset Villa",
     img: "/a4.jpg",
     price: "$70,000/night",
     desc: "Compact, serene, and perfect for solo travelers or couples.",
   },
   {
     id: 5,
-    title: "Penthouse View",
+    title: "Ocean Breeze",
     img: "/a5.jpg",
     price: "$150/night",
     desc: "Breathtaking cityscape views with executive living experience.",
   },
   {
     id: 6,
-    title: "Family Comfort Suite",
+    title: "Penthouse Elite",
     img: "/a6.jpg",
     price: "$120/night",
     desc: "Spacious and designed for families with kids and groups.",
