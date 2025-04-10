@@ -71,9 +71,9 @@ const ViewInventoryComp = () => {
         body: [
           [
             record.product.name,
-            `₦${record.product.price}`,
+            `$ ${record.product.price}`,
             record.quantity,
-            `₦${record.totalAmount}`
+            `$ ${record.totalAmount}`
           ]
         ]
       });
