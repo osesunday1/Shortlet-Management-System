@@ -35,7 +35,8 @@ const Contact = () => {
 
   return (
     <>
-    <div className="max-w-xl mx-auto mt-12 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100 mb-45">
+    <div className="min-h-screen ">
+    <div className="max-w-xl mx-auto mt-12 bg-white shadow-xl rounded-lg p-8 border-1 border-primary-100 ">
       <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
       <form ref={formRef} onSubmit={sendEmail} className="space-y-4 ">
         <input
@@ -79,6 +80,7 @@ const Contact = () => {
           {loading ? "Sending..." : "Send Message"}
         </button>
       </form>
+    </div>
     </div>
     <Footer/>
     </>

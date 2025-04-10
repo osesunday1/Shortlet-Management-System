@@ -29,7 +29,7 @@ function App() {
   };
   return (
     
-    <div className='text-default min-h-screen bg-gradient-to-r from-indigo-400 to-cyan-400'>
+    <div className='text-default min-h-screen bg-gradient-to-r from-violet-200 to-pink-200 min-h-screen '>
       <Navbar/>
      <Routes>
      <Route path='/' element={ <Home />} />

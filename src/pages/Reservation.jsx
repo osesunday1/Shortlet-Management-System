@@ -35,6 +35,7 @@ const Reservation = () => {
 
   return (
     <>
+    <div className="min-h-screen">
     <div className="max-w-xl mx-auto mt-10 bg-white shadow-xl rounded-lg p-8 border-1 mb-45 border-primary-100">
       <h2 className="text-2xl font-bold mb-6 text-center">Reservation Form</h2>
       <form ref={formRef} onSubmit={sendEmail} className="space-y-4">
@@ -86,6 +87,7 @@ const Reservation = () => {
         </button>
       </form>
       
+    </div>
     </div>
     <Footer/>
     </>
