@@ -23,7 +23,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-indigo-400 to-cyan-400">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-r from-violet-200 to-pink-200">
       <div className="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
         <h2 className="text-2xl font-bold mb-6 text-center text-gray-800">Sign In</h2>
 
